@@ -1,241 +1,147 @@
 <!--Caroline Lee
   - 9-30-2017
-  - Lab 4
-  - Car Dealership Survey Page
+  - Lab 5
+  - Car Dealership Survey Page - with JS
 -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Toyota Dealership Survey</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <!--template from: https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
-  <!--background img from: stcloudtoyota.com-->
-<style>
-
-  /* Special class on .container surrounding .navbar, used for positioning it into place. */
-  .navbar-wrapper {
-    position: initial;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 20;
-  }
-
-  /* Flip around the padding for proper display in narrow viewports */
-  .navbar-wrapper > .container {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .navbar-wrapper .navbar {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  .navbar-wrapper .navbar .container {
-    width: auto;
-  }
-
-  .container-fluid h1 {
-    color: white;
-  }
-
-  body {
-    background-image: url(dealership.jpg); 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    background-size: cover;
-    background-color: #e8e8e8;
-} 
-
-.list {
-    background-color: #e8e8e8; 
-   
-    font-weight: bold;
-    color: #222;
-    padding: 20px;
-}
-
-.list li {
-  padding: 5px;
-}
-
-.submit p {
-  color: white;
-  text-align: center;
-  background-color: #111
-  padding: 20px;
-}
-
-.submit .submit-btn {
-        background-color: #812;
-        border: none;
-        display: inline-block;
-        color: white;
-        font-size: 20px;
-        margin: 4px 2px;
-        padding: 15px 32px;
-        text-align: center;
-
-    }
-
-.submit .submit-btn:hover {
-        background-color: #913;
-    }
-}
-
-
-</style>
+    <title>Toyota Dealership Survey</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href='../css/main.css'>
+    <!--template from: https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
 </head>
 
 <body>
-
-  <div class="navbar-wrapper">
-      <div class="container">
-
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Toyota Dealership</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="http://ps11.pstcc.edu/~c2375a03/lab4/dealer_home">Home</a></li>
-                <li><a href="http://ps11.pstcc.edu/~c2375a03/lab4/dealer_contact">Contact</a></li>
-                <li class="active"><a href="#">Customer Survey</a></li> 
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-      </div>
-    </div>
-
-
-    <div class="container-fluid">    
-        <div class="col-sm-12 text-center"> 
-          <h1>Customer Survey</h1>
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Toyota Dealership</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/lab4/dealer_home">Home</a></li>
+                            <li><a href="/lab4/dealer_contact">Contact</a></li>
+                            <li class="active"><a href="#">Customer Survey</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </div>
-    
-
-
-
-<div class="list"; style="width: 650px; margin:0 auto;">
-<p><i>Please rate each statement from 1(low) to 5(high).</i></p>
-<ol>
-  <li>Customer service agent was knowledgable and helpful.</li>
-   <form>
-     <input type="radio" name="rating" value="1"> 1
-     <input type="radio" name="rating" value="2"> 2
-     <input type="radio" name="rating" value="3"> 3
-     <input type="radio" name="rating" value="4"> 4
-     <input type="radio" name="rating" value="5"> 5
-   </form>
-  <li>Variety of vehicles to choose from was satisfactory.</li>
-   <form>
-     <input type="radio" name="rating" value="1"> 1
-     <input type="radio" name="rating" value="2"> 2
-     <input type="radio" name="rating" value="3"> 3
-     <input type="radio" name="rating" value="4"> 4
-     <input type="radio" name="rating" value="5"> 5
-   </form>
-  <li>The vehicles available for selection were of high quality.</li>
-    <form>
-     <input type="radio" name="rating" value="1"> 1
-     <input type="radio" name="rating" value="2"> 2
-     <input type="radio" name="rating" value="3"> 3
-     <input type="radio" name="rating" value="4"> 4
-     <input type="radio" name="rating" value="5"> 5
-    </form>
-  <li>Customer was able to find the vehicle he/she was looking for.</li>
-    <form>
-     <input type="radio" name="rating" value="1"> 1
-     <input type="radio" name="rating" value="2"> 2
-     <input type="radio" name="rating" value="3"> 3
-     <input type="radio" name="rating" value="4"> 4
-     <input type="radio" name="rating" value="5"> 5
-    </form>
-  <li>Vehicle functions and features were adequately explained/demonstrated.</li>
-    <form>
-     <input type="radio" name="rating" value="1"> 1
-     <input type="radio" name="rating" value="2"> 2
-     <input type="radio" name="rating" value="3"> 3
-     <input type="radio" name="rating" value="4"> 4
-     <input type="radio" name="rating" value="5"> 5
-    </form>
-  <li>Overall customer experience was satisfactory.</li>
-    <form>
-     <input type="radio" name="rating" value="1"> 1
-     <input type="radio" name="rating" value="2"> 2
-     <input type="radio" name="rating" value="3"> 3
-     <input type="radio" name="rating" value="4"> 4
-     <input type="radio" name="rating" value="5"> 5
-    </form>
-  <li>Customer would recommend this company to friends and family.</li>
-    <form>
-     <input type="radio" name="rating" value="1"> 1
-     <input type="radio" name="rating" value="2"> 2
-     <input type="radio" name="rating" value="3"> 3
-     <input type="radio" name="rating" value="4"> 4
-     <input type="radio" name="rating" value="5"> 5
-    </form>
-</ol>
-</div>
-<div class= "submit"; style="width: 650px; margin: 0 auto;">
-  <br>
-  <p>Please submit your answers. Thank you for taking our survey!</p>
-    <div style="text-align: center">
-     <input type="submit" class="submit-btn" value="Submit">
+    <div class="container-fluid">
+        <div class="col-md-12 text-center">
+            <h1>Customer Survey</h1>
+        </div>
     </div>
-</div>
-
-<!-- FOOTER -->
-      <footer>
+    <div class="list" ; style="width: 650px; margin:0 auto;">
+        <p><i>Please rate each statement from 1(low) to 5(high).</i></p>
+        <table>
+            <form>
+                <p>1. Customer service agent was knowledgable and helpful.</p>
+                <input class="radio" type="radio" name="rating" value="1"> 1
+                <input class="radio" type="radio" name="rating" value="2"> 2
+                <input class="radio" type="radio" name="rating" value="3"> 3
+                <input class="radio" type="radio" name="rating" value="4"> 4
+                <input class="radio" type="radio" name="rating" value="5"> 5
+            </form>
+            <br>
+            <br>
+            <form>
+                <p>2. Variety of vehicles to choose from was satisfactory.</p>
+                <input class="radio" type="radio" name="rating" value="1"> 1
+                <input class="radio" type="radio" name="rating" value="2"> 2
+                <input class="radio" type="radio" name="rating" value="3"> 3
+                <input class="radio" type="radio" name="rating" value="4"> 4
+                <input class="radio" type="radio" name="rating" value="5"> 5
+            </form>
+            <br>
+            <br>
+            <form>
+                <p>3. The vehicles available for selection were of high quality.</p>
+                <input class="radio" type="radio" name="rating" value="1"> 1
+                <input class="radio" type="radio" name="rating" value="2"> 2
+                <input class="radio" type="radio" name="rating" value="3"> 3
+                <input class="radio" type="radio" name="rating" value="4"> 4
+                <input class="radio" type="radio" name="rating" value="5"> 5
+            </form>
+            <br>
+            <br>
+            <form>
+                <p>4. Customer was able to find the vehicle he/she was looking for.</p>
+                <input class="radio" type="radio" name="rating" value="1"> 1
+                <input class="radio" type="radio" name="rating" value="2"> 2
+                <input class="radio" type="radio" name="rating" value="3"> 3
+                <input class="radio" type="radio" name="rating" value="4"> 4
+                <input class="radio" type="radio" name="rating" value="5"> 5
+            </form>
+            <br>
+            <br>
+            <form>
+                <p>5. Vehicle functions and features were adequately explained/demonstrated.</p>
+                <input class="radio" type="radio" name="rating" value="1"> 1
+                <input class="radio" type="radio" name="rating" value="2"> 2
+                <input class="radio" type="radio" name="rating" value="3"> 3
+                <input class="radio" type="radio" name="rating" value="4"> 4
+                <input class="radio" type="radio" name="rating" value="5"> 5
+            </form>
+            <br>
+            <br>
+            <form>
+                <p>6. Overall customer experience was satisfactory.</p>
+                <input class="radio" type="radio" name="rating" value="1"> 1
+                <input class="radio" type="radio" name="rating" value="2"> 2
+                <input class="radio" type="radio" name="rating" value="3"> 3
+                <input class="radio" type="radio" name="rating" value="4"> 4
+                <input class="radio" type="radio" name="rating" value="5"> 5
+            </form>
+            <br>
+            <br>
+            <form>
+                <p>7. Customer would recommend this company to friends and family.</p>
+                <input class="radio" type="radio" name="rating" value="1"> 1
+                <input class="radio" type="radio" name="rating" value="2"> 2
+                <input class="radio" type="radio" name="rating" value="3"> 3
+                <input class="radio" type="radio" name="rating" value="4"> 4
+                <input class="radio" type="radio" name="rating" value="5"> 5
+            </form>
+        </table>
+    </div>
+    <div class="row name-row">
+        <div class="col-md-offset-5 col-md-2 username" align="center">
+            <label for="usr">Please enter your name:</label>
+            <input type="text" class="form-control" id="usr">
+        </div>
+    </div>
+    <div class="row submit-row">
+        <div class="submit" ; style="width: 650px; margin: 0 auto;">
+            <br>
+            <p>Please submit your answers. Thank you for taking our survey!</p>
+            <div style="text-align: center">
+                <input type="submit" class="submit-btn" value="Submit">
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
         <p>&copy; 2017 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
-
-      <!--JS-->
-      <script>
-    $(document).ready(function(){
-      // Initialize Tooltip
-      $('[data-toggle="tooltip"]').tooltip(); 
-      
-      // Add smooth scrolling to all links in navbar, footer link, caption btns
-      $("footer a[href='#']").on('click', function(event) {
-
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 900, function(){
-       
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-    })
-    </script>
-
+    </footer>
 </body>
+<script src="../js/survey.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </html>
