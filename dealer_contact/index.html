@@ -1,0 +1,254 @@
+<!--Caroline Lee
+  - 9-29-2017
+  - Lab 4
+  - Car Dealership Contact Page
+-->
+
+<!--find background color-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Us</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--template from: https://getbootstrap.com/docs/3.3/examples/carousel/#-->
+
+	<style>
+
+	body {
+	  padding-bottom: 40px;
+	  color: #5a5a5a;
+	  background-color: #e8e8e8;
+	}
+	
+	  	/* CUSTOMIZE THE NAVBAR
+	-------------------------------------------------- */
+
+	/* Special class on .container surrounding .navbar, used for positioning it into place. */
+	.navbar-wrapper {
+	  position: initial;
+	  top: 0;
+	  right: 0;
+	  left: 0;
+	  z-index: 20;
+	}
+
+	/* Flip around the padding for proper display in narrow viewports */
+	.navbar-wrapper > .container {
+	  padding-right: 0;
+	  padding-left: 0;
+	}
+	.navbar-wrapper .navbar {
+	  padding-right: 15px;
+	  padding-left: 15px;
+	}
+	.navbar-wrapper .navbar .container {
+	  width: auto;
+	}
+
+		/* Featurettes
+	------------------------- */
+
+	.featurette-divider {
+	  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+	}
+
+	/* Thin out the marketing headings */
+	.featurette-heading {
+	  font-weight: 300;
+	  line-height: 1;
+	  letter-spacing: -1px;
+	  font-size: 30px;
+	}
+
+	@media (min-width: 992px) {
+	  .featurette-heading {
+	    margin-top: 120px;
+	  }
+	}
+
+	.featurette {
+		margin: 80px;
+	}
+	.section h1 {
+		text-align: center;
+		font-weight: bold;
+	}
+
+  .submit p {
+  text-align: center;
+  background-color: #111
+  padding: 20px;
+}
+
+.submit .submit-btn {
+        background-color: #812;
+        border: none;
+        display: inline-block;
+        color: white;
+        font-size: 20px;
+        margin: 4px 2px;
+        padding: 15px 32px;
+        text-align: center;
+
+    }
+
+.submit .submit-btn:hover {
+        background-color: #913;
+    }
+}
+
+
+	</style>  <!--put css here-->
+</head>
+
+<!--navbar (link to survey page, link to contact online sales)-->
+
+<body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Toyota Dealership</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="http://ps11.pstcc.edu/~c2375a03/lab4/dealer_home">Home</a></li>
+                <li class="active"><a href="#">Contact</a></li>
+                <li><a href="http://ps11.pstcc.edu/~c2375a03/lab4/dealer_survey">Customer Survey</a></li> 
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!--Comments Section-->
+    <div class="container">
+      <div class="col-md-push-2 col-md-3">
+      <h2 class="text-center">Contact Us:</h2>
+      <p>Please feel free to leave us some feedback or ask a question.</p>
+      <form>
+        <div class="form-group">
+          <label for="usr">First Name:</label>
+          <input type="text" class="form-control" id="fname">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Last Name:</label>
+          <input type="password" class="form-control" id="lname">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Email:</label>
+          <input type="password" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Phone:</label>
+          <input type="password" class="form-control" id="phone">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Postal Code:</label>
+          <input type="password" class="form-control" id="zipcode">
+        </div>
+        <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      </form>
+    </div>
+    <div id="personnel" class="col-md-push-4 col-md-7">
+      <hr>
+      <h4>Ad Sales</h4>
+      <p>Kate Austin</p>
+      <p>(555)888-4444</p>
+      <p>kaustin@email.com</p>
+      <hr>
+      <h4>Customer Service</h4>
+      <p>Jack Shepard</p>
+      <p>(555)888-4445</p>
+      <p>jshepard@email.com</p>
+      <hr>
+      <h4>Manager</h4>
+      <p>Desmond Hume</p>
+      <p>(555)888-4446</p>
+      <p>dhume@email.com</p>
+      <hr>
+    </div>
+    <div id="contact" class="col-md-push-4 col-md-7">
+      <h3 class="text-center"></h3>
+      <div class="row">
+          <div class="info">
+            <p><span class="glyphicon glyphicon-map-marker"></span>Kansas City, MO</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone: +1 888 4440</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: service@mail.com</p>
+          </div>
+      </div>
+    </div>
+    <hr>
+    <div class= "submit"; style="width: 650px; margin: 0 auto;">
+      <div class="col-md-12" style="text-align: center">
+       <p>Thank you. We will be in touch with you shortly.</p>
+       <input type="submit" class="submit-btn" value="Submit">
+      </div>
+    </div>
+  </div>
+
+   
+
+
+	
+
+ 	<!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+     <!--JS-->
+      <script>
+		$(document).ready(function(){
+		  // Initialize Tooltip
+		  $('[data-toggle="tooltip"]').tooltip(); 
+		  
+		  // Add smooth scrolling to all links in navbar, footer link, caption btns
+		  $("footer a[href='#']").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 900, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		})
+		</script>
+
+</body>
+</html>
+

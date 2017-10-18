@@ -1,0 +1,237 @@
+<!--Caroline Lee
+  - 9-27-2017
+  - Lab 4
+  - Traveling Orchestra Webpage
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Traveling Orchestra</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--template from: https://getbootstrap.com/docs/3.3/examples/carousel/#-->
+	<style>
+	body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: white;
+      background-color: #000
+
+  	}
+
+	
+	footer a {
+      color: #f5f5f5;
+  	}
+  	footer a:hover {
+      color: #777;
+      text-decoration: none;
+  	} 
+  	.carousel-inner img {
+      width: 80%; 
+      margin: auto;
+  	}
+  	/* Flip around the padding for proper display in narrow viewports */
+	.navbar-wrapper > .container {
+	  padding-right: 0;
+	  padding-left: 0;
+	}
+	.navbar-wrapper .navbar {
+	  padding-right: 15px;
+	  padding-left: 15px;
+	}
+	.navbar-wrapper .navbar .container {
+	  width: auto;
+	}
+	  
+	.schedule {
+	    background: #2d2d30;
+	    color: #bdbdbd;
+	}
+	
+	.schedule h2 {color: #fff;}
+	.schedule h4 {color: #fff;}
+
+  
+
+</style>
+</head>
+
+<body>
+
+	<!--Navigation bar-->
+	 <div class="navbar-wrapper">
+      <div class="container">
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+		  <div class="navbar-header">
+			 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			 		<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Traveling Orchestra</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#homepage">HOME</a></li>
+					<li><a href="#schedule">SCHEDULE</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
+</div>
+
+            
+
+	<!--Carousel-->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides (all images are my own)-->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="Orchestra.jpg" alt="Symphony" width="1200" height="700">     
+      </div>
+      <div class="item">
+        <img src="Closeup.jpg" alt="Closeup" width="1200" height="700">     
+      </div>
+      <div class="item">
+        <img src="BackView.jpg" alt="BackView" width="1200" height="700">     
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+	<!--Info container-->
+	<div id="history" class="container text-center">
+		<h3>History of the Symphony</h3>
+		<p>Paragraph about the history of this symphony orchestra.This orchestra has been on the road since 2010. This orchestra is super awesome. They love to play music because music is so much fun. There is nothing better to do in the entire world. Everyone in the world wishes they could be in this orchestra because they are so cool. More history about the symphony orchestra. Instruments and music and stuff.  </p>
+	</div>
+	<br>
+
+	<!--Conductor Container-->
+  <div class="row">
+    <div class="col-sm-12" align="center">
+      <p class="text-center"><strong>Conductor</strong></p><br>
+      <a href="#conductor">
+        <img src="Director.jpg" class="img-rounded person" alt="Conductor Name" width="190" height="255">
+      </a>
+        <p>Caroline Lee</p>
+    </div>
+  </div>
+<br><br>
+
+<!--Tour Schedule Container-->
+<div id="schedule" class="schedule">
+    <div class="container">
+	  <h2 class="text-center">TOUR SCHEDULE</h2>
+	  <h4 class="text-center">The symphony tours around the world for 5 months every year</h4>                                                                                      
+	  <div class="table-responsive">          
+	  <table class="table">
+	    <thead>
+	      <tr>
+	        <th>Tour Dates</th>
+	        <th>Locations</th>
+	        <th>Venue</th>
+	        <th>Ticket Prices</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td>Oct. 14, 2017</td>
+	        <td>Baton Rouge, LA</td>
+	        <td>LSU Union Theater</td>
+	        <td>Adult: $50 | Child: $25 | Student: $15</td>
+	      </tr>
+	      <tr>
+	      	<td>Oct. 21, 2017</td>
+	      	<td>Atlanta, GA</td>
+	      	<td>Atlanta Symphony Hall</td>
+	      	<td>Adult: $75 | Child: $30 | Student: $25</td>
+	      </tr>
+	      <tr>
+	      	<td>Oct. 28, 2017</td>
+	      	<td>Knoxville, TN</td>
+	      	<td>Tennessee Theater</td>
+	      	<td>Adult: $40 | Child: $20 | Student: $10</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	  </div>
+	</div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+	<div class="row">
+	    <div class="col-md-12" align="center">
+	      <p><span class="glyphicon glyphicon-map-marker"></span>Los Angeles, CA</p>
+	      <p><span class="glyphicon glyphicon-phone"></span>Phone: +1 555 5555</p>
+	      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+	    </div>
+	</div>
+</div>
+
+	<!--Footer -->
+	<footer class="text-center">
+	  <a class="up-arrow" href="#homepage" data-toggle="tooltip" title="TO TOP">
+	    <span class="glyphicon glyphicon-chevron-up"></span>
+	  </a><br>
+	  <p>End of Page</p> 
+	</footer> 
+
+	<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#homepage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

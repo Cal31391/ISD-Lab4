@@ -1,0 +1,362 @@
+<!--Caroline Lee
+  - 9-29-2017
+  - Lab 4
+  - Car Dealership Homepage
+-->
+
+<!--find background color-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Toyota Dealership</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--template from: https://getbootstrap.com/docs/3.3/examples/carousel/#-->
+
+	<style>
+
+	body {
+	  padding-bottom: 40px;
+	  color: #5a5a5a;
+	  background-color: #e8e8e8;
+	}
+	.carousel-inner img {
+      width: 60%; 
+      margin: auto;
+  	}
+  	@media (max-width: 600px) {
+    	.carousel-caption {
+      	display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    	}
+  	}
+  	/* Carousel base class */
+	.carousel {
+	  margin-bottom: 40px;
+	}
+	/* Since positioning the image, we need to help out the caption */
+	.carousel-caption {
+	  z-index: 10;
+	}
+	.carousel .item {
+	  background-color: #777;
+	}
+
+
+	  	/* CUSTOMIZE THE NAVBAR
+	-------------------------------------------------- */
+
+	/* Special class on .container surrounding .navbar, used for positioning it into place. */
+	.navbar-wrapper {
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  left: 0;
+	  z-index: 20;
+	}
+
+	/* Flip around the padding for proper display in narrow viewports */
+	.navbar-wrapper > .container {
+	  padding-right: 0;
+	  padding-left: 0;
+	}
+	.navbar-wrapper .navbar {
+	  padding-right: 15px;
+	  padding-left: 15px;
+	}
+	.navbar-wrapper .navbar .container {
+	  width: auto;
+	}
+
+		/* Featurettes
+	------------------------- */
+
+	.featurette-divider {
+	  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+	}
+
+	/* Thin out the marketing headings */
+	.featurette-heading {
+	  font-weight: 300;
+	  line-height: 1;
+	  letter-spacing: -1px;
+	  font-size: 30px;
+	}
+
+	@media (min-width: 992px) {
+	  .featurette-heading {
+	    margin-top: 120px;
+	  }
+	}
+
+	.featurette {
+		margin: 80px;
+	}
+	.section h1 {
+		text-align: center;
+		font-weight: bold;
+	}
+
+
+
+
+	</style>  <!--put css here-->
+</head>
+
+<!--navbar (link to survey page, link to contact online sales)-->
+
+<body>
+    <div class="navbar-wrapper" id="navbar">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Toyota Dealership</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="http://ps11.pstcc.edu/~c2375a03/lab4/dealer_contact">Contact</a></li>
+                <li><a href="http://ps11.pstcc.edu/~c2375a03/lab4/dealer_survey">Customer Survey</a></li> 
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+	<!--carousel (or maybe jumbotron, just for adverts)-->
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="camry-carousel.jpg" alt="First slide" width="700" height="350"> <!--img from: st.motortrend.com-->
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Cars</h1>
+              <p><a class="btn btn-lg btn-primary" href="#cars" role="button">See Available</a></p>
+              <p>The best selection in the Southeast</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="tundra-carousel.jpg" alt="Second slide">
+          <div class="container"> <!--img from: autoblog.com-->
+            <div class="carousel-caption">
+              <h1>Trucks</h1>
+              <p><a class="btn btn-lg btn-primary" href="#trucks" role="button">See Available</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="suv-carousel.jpg" alt="Third slide"> <!--img from: edmunds.com-->
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>SUVs</h1>
+              <p><a class="btn btn-lg btn-primary" href="#suvs" role="button">See Available</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="fourth-slide" src="van-carousel.jpg" alt="Fourth slide"> <!--img from: edmunds.com-->
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Vans</h1>
+              <p><a class="btn btn-lg btn-primary" href="#vans" role="button">See Available</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+	<!--featurettes (cars and specs)-->
+<div id="vehicles" class="vehicles">
+
+  <hr class="featurette-divider">
+
+    <div id="cars" class="section">
+     <h1 class="featurette-section-heading">Cars</h1>
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Camry XLE  <span class="text-muted">$80,000</span></h2>
+          <p class="lead">Specs</p>
+          <p>2.5L Engine</p>
+          <p>Front Wheel Drive</p>
+          <p>25 MPG</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="2015_Toyota_Camry_XLE_004.jpg" alt="Camry XLE"> 
+        </div> <!--img from: hanabi.autoweek.com-->
+      </div>
+
+     <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Corolla XSE  <span class="text-muted">$25,950</span></h2>
+          <p class="lead">Specs</p>
+          <p>2.5L Engine</p>
+          <p>Front Wheel Drive</p>
+          <p>35 MPG</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="2017-Toyota-Corolla-XSE.jpg" alt="Corolla XSE"> 
+        </div> <!--img from: st.motortrend.com-->
+      </div>
+    </div>
+
+  <hr class="featurette-divider">
+
+    <div id="trucks" class="section">
+  	 <h1 class="featurette-section-heading">Trucks</h1>
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Tacoma  <span class="text-muted">$40,550</span></h2>
+          <p class="lead">Specs</p>
+          <p>3.5L Engine</p>
+          <p>Front Wheel Drive</p>
+          <p>22 MPG</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="tacoma.jpg" alt="Tacoma"> 
+        </div> <!--img from: res.cloudinary.com-->
+      </div>
+
+  	 <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Tundra SR  <span class="text-muted">$120,000</span></h2>
+          <p class="lead">Specs</p>
+          <p>3.5L Engine</p>
+          <p>4 Wheel Drive</p>
+          <p>20 MPG</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="tundra-sr.jpg" alt="Tundra SR">
+        </div> <!--img from: st.motortrend.com-->
+      </div>
+    </div>
+
+  <hr class="featurette-divider">
+
+  	<div id="suvs" class="section">
+  	 <h1 class="featurette-section-heading">SUVS</h1>
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">4Runner SR5  <span class="text-muted">$20,900</span></h2>
+          <p class="lead">Specs</p>
+          <p>4.0L Engine</p>
+          <p>4 Wheel Drive</p>
+          <p>18 MPG</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="4RunnerSR5-sale.jpg" alt="4Runner SR5">
+        </div> <!--img from: st.motortrend.com-->
+      </div>
+
+     <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">RAV4  <span class="text-muted">$30,000</span></h2>
+          <p class="lead">Specs</p>
+          <p>2.5L Engine</p>
+          <p>All Wheel Drive</p>
+          <p>25 MPG</p>
+
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="rav4-sale.jpg" alt="RAV4">
+        </div> <!--img from: cnet.com-->
+      </div>
+    </div>
+
+  <hr class="featurette-divider">
+
+  	<div id="vans" class="section">
+  	 <h1 class="featurette-section-heading">Minivans</h1>
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Sienna  <span class="text-muted">$1</span></h2>
+          <p class="lead">Specs</p>
+          <p>3.5L Engine</p>
+          <p>Front Wheel Drive</p>
+          <p>20 MPG</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="sienna-sale.jpg" alt="Sienna">
+        </div> <!--img from: autoandreview.com-->
+      </div>
+    </div>
+
+      <hr class="featurette-divider">
+</div>
+
+ 	<!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#navbar">Back to top</a></p>
+        <p>&copy; 2017 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+     <!--JS-->
+      <script>
+		$(document).ready(function(){
+		  // Initialize Tooltip
+		  $('[data-toggle="tooltip"]').tooltip(); 
+		  
+		  // Add smooth scrolling to footer link, caption btns
+		  $("footer a, .carousel-caption a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 900, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		})
+		</script>
+
+</body>
+</html>
+
