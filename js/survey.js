@@ -1,18 +1,9 @@
-function checkCorrectRequiredFields(obj, obj, obj, obj, obj, obj, obj) {
-    //all required fields filled in - warn if not, do not process if not
-    if ($('input:radio:checked').length == 7) {
-        alert("I am an alert box!");
-    }
-
-}
-$('submit-btn').click(function() {
+$('button').click(function() {
     if ($('input:radio:checked').length < 7) {
-        alert('Please check an option from each group.');
-    } else {
-        alert('Success!');
+        alert('Please select an option for every question.');
     }
     return false;
-});
+}); //http://jsfiddle.net/0ymfdL6o/
 
 function checkUserInput() {
     //all inputs are valid - warn if not, do not process if not
