@@ -41,12 +41,12 @@
             </nav>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="col-md-12 text-center">
+    <div class="container-fluid main" id="main">
+        <div class="col-md-12 text-center title">
             <h1>Customer Survey</h1>
         </div>
     </div>
-    <div class="list" ; style="width: 650px; margin:0 auto;">
+    <div class="list" id="list" style="width: 650px; margin:0 auto;">
         <p><i>Please rate each statement from 1(low) to 5(high).</i></p>
         <ol>
             <li>Customer service agent was knowledgable and helpful.</li>
@@ -107,7 +107,7 @@
             </form>
         </ol>
     </div>
-    <div class="row name-row">
+    <div class="row name-row" id="name-row">
         <div class="col-md-offset-5 col-md-2 username" align="center">
             <label for="usr">Please enter your name:</label>
             <input type="text" class="form-control" id="usr">
@@ -116,9 +116,8 @@
     <div class="row submit-row">
         <div class="submit" ; style="width: 650px; margin: 0 auto;">
             <br>
-            <p>Please submit your answers. Thank you for taking our survey!</p>
             <div style="text-align: center">
-                <button type="submit" class="submit-btn">Submit</button>
+                <button class="submit-btn" onclick="changePage()">Submit</button>
             </div>
         </div>
     </div>
