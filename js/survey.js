@@ -1,21 +1,20 @@
 function changePage() {
     var radios = document.querySelectorAll('input[type="radio"]:checked');
     var radio_len = radios.length;
+    var user_name = document.getElementById("usr").value;
 
     if (radios.length < 7) {
-        createSummaryPage(radio_len);
-        //alert('Please select an option for every question.');
+
+        alert('Please select an option for every question.');
+    } else if (user_name.length == 0 || !user_name.match(/^[a-z]+$/i)) {
+        alert('Please enter a valid name.');
+
     } else {
         createSummaryPage(radio_len);
     }
 } // https://stackoverflow.com/questions/1423777/
 // how-can-i-check-whether-a-radio-button-is-selected-with-javascript
 
-
-
-function checkUserInput() {
-    //all inputs are valid, i.e - an actual character string
-}
 
 function createSummaryPage(radio_length) {
 
