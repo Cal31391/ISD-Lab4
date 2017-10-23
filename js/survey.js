@@ -25,9 +25,9 @@ function createSummaryPage(radio_length) {
     var thank_you_msg = "Thank you for taking our survey, " + user_name + "!"
     var radio_len = radio_length;
 
-    var rating_form;
     var rating;
-    var element_id;
+    var element_num;
+    var message;
 
     document.getElementById("name-row").innerHTML = "";
 
@@ -36,26 +36,43 @@ function createSummaryPage(radio_length) {
         '<h1>Survey Summary</h1>\n' +
         '</div>\n';
 
-    content_div.innerHTML = thank_you_msg;
-
-
+    var iter = 0;
     for (var i = 0; i < radio_len; i++) {
+        iter = i + 1;
+        element_num = "q" + iter.toString();
+        element_id = document.getElementById(element_num);
+        rating = document.querySelector('input[name=rating' + iter.toString() + ']:checked').value;
 
-        element_id = "q" + i;
+        switch (rating) {
+            case '1':
+                message = "Not satisfied.";
+                break;
 
-        rating_form = document.getElementById(element_id);
+            case '2':
+                message = "Slightly satisfied.";
+                break;
 
-        rating_set = document.getElementsByName("rating1");
-        for (var i = 0; i < rating_set.length; i++) {
-            if (rating_set[i].checked) {
-                rating = rating_set[i].value;
-            }
+            case '3':
+                message = "Neutral.";
+                break;
+
+            case '4':
+                message = "Satsified.";
+                break;
+
+            case '5':
+                message = "Very satisfied.";
+                break;
+
+            default:
+                message = "";
         }
 
-
-
-        //rating_form.innerHTML = rating;
-
+        element_id.innerHTML = message;
     }
-    alert(i);
+
+
+
+    content_div.innerHTML += thank_you_msg;
+
 }
