@@ -27,8 +27,23 @@ function createSummaryPage() {
         '<h1>Survey Summary</h1>\n' +
         '</div>\n';
 
-    content_div.innerHTML = "Thank you for taking our survey, " + user_name + "!";;
+    content_div.innerHTML = "Thank you for taking our survey, " + user_name + "!";
+    //       ^       ^      ^      ^
+    // call calculateSurveyNums() here to create div
 
     document.appendChild(main_div);
     document.appendChild(content_div);
+}
+
+function calculateSurveyNums() {
+    //calculate radio values for each question
+    //create new div element for content
+    var rating = document.querySelector('input[name="rating1"]:checked').value;
+
+    //put for loop here:
+    //dynamically create summary for all 7 questions
+    // for radios:checked in radios, iterate and fill rating variable with value for current element in loop, 
+    // add to list, keep going to next until all are processed, put in div
+
+    //return div element
 }
