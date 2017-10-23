@@ -1,3 +1,7 @@
+/* Caroline Lee
+JS file for dealer_survey
+*/
+
 function changePage() {
     var radios = document.querySelectorAll('input[type="radio"]:checked');
     var radio_len = radios.length;
@@ -19,7 +23,6 @@ function changePage() {
 function createSummaryPage(radio_length) {
 
     var main_div = document.getElementById("main");
-    var content_div = document.getElementById("list");
     var user_name = document.getElementById("usr").value;
     var thank_you_msg = "Thank you for taking our survey, " + user_name + "!"
     var radio_len = radio_length;
@@ -27,6 +30,8 @@ function createSummaryPage(radio_length) {
     var rating;
     var element_num;
     var message;
+    var element_id;
+
 
     document.getElementById("name-row").innerHTML = "";
 
@@ -70,8 +75,6 @@ function createSummaryPage(radio_length) {
         element_id.innerHTML = message;
     }
 
-
-
-    content_div.innerHTML += thank_you_msg;
-
+    alert(thank_you_msg);
+    window.location.href = '../dealer_home';
 }
