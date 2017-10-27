@@ -19,6 +19,13 @@ function changePage() {
 } // https://stackoverflow.com/questions/1423777/
 // how-can-i-check-whether-a-radio-button-is-selected-with-javascript
 
+const GRADE_MESSAGES = {
+    "1": "Not satisfied",
+    "2": "Slightly satisfied",
+    "3": "Neutral",
+    "4": "Satisfied",
+    "5": "Very satisfied"
+};
 
 function createSummaryPage(radio_length) {
 
@@ -29,7 +36,7 @@ function createSummaryPage(radio_length) {
 
     var rating;
     var element_num;
-    var message;
+    var message = "";
     var element_id;
 
 
@@ -45,36 +52,15 @@ function createSummaryPage(radio_length) {
         iter = i + 1;
         element_num = "q" + iter.toString();
         element_id = document.getElementById(element_num);
-        rating = document.querySelector('input[name=rating' + iter.toString() + ']:checked').value;
+        rating = parseInt(document.querySelector('input[name=rating' + iter.toString() + ']:checked').value);
 
-        switch (rating) {
-            case '1':
-                message = "Not satisfied.";
-                break;
-
-            case '2':
-                message = "Slightly satisfied.";
-                break;
-
-            case '3':
-                message = "Neutral.";
-                break;
-
-            case '4':
-                message = "Satsified.";
-                break;
-
-            case '5':
-                message = "Very satisfied.";
-                break;
-
-            default:
-                message = "";
-        }
+        message = GRADE_MESSAGES[rating];
 
         element_id.innerHTML = message;
     }
 
     alert(thank_you_msg);
     window.location.href = '../dealer_home';
+
+
 }
